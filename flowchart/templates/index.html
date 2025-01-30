@@ -7,10 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="{% static 'js/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 
 <body>
-    <button id="flowchart-create" onclick="createFlowchart()">フローチャート作成</button>
+    <div id="header">
+        <button id="create-btn" onclick="createFlowchart()">フローチャート作成</button>
+    </div>
+    <div id="flowchart-area">
+        <div id="input-flowchart">
+            <span id="title-area">タイトル：<input type="text" id="flowchart-title" placeholder="タイトル"></span>
+            <span id="desc-area">説&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明：<textarea type="text" id="flowchart-description"
+                    placeholder="説明"></textarea></span>
+
+            <div id="flowchart-input-area">
+            </div>
+        </div>
+        <embed id="flowchart-pdf" src="{% static 'pdf/flowchart.pdf' %}" type="application/pdf" width="50%"
+            height="800px" />
+    </div>
 </body>
 
 </html>
