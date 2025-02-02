@@ -21,6 +21,13 @@
                     placeholder="説明"></textarea></span>
 
             <div id="flowchart-input-area">
+                <div id="flowchart-start" class="flowchart-start-end">開始</div>
+                <div id="flowchart-add-area">
+                    追加：
+                    <button id="nomal-add-btn" class="btn add-btn" onclick="addFlowchart()">プロセス</button>
+                    <button id="branch-add-btn" class="btn add-btn" onclick="addStartFlowchart()">条件分岐</button>
+                    <button id="end-btn" class="btn add-btn" onclick="addEndFlowchart()">終了</button>
+                </div>
             </div>
         </div>
         <embed id="flowchart-pdf" src="{% static 'pdf/flowchart.pdf' %}" type="application/pdf" width="50%"
