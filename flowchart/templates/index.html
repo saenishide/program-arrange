@@ -17,11 +17,43 @@
     <div id="flowchart-area">
         <div id="input-flowchart">
             <span id="title-area">タイトル：<input type="text" id="flowchart-title" placeholder="タイトル"></span>
-            <span id="desc-area">説&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明：<textarea type="text" id="flowchart-description"
-                    placeholder="説明"></textarea></span>
 
             <div id="flowchart-input-area">
                 <div id="flowchart-start" class="flowchart-start-end">開始</div>
+                <hr class="add-line">
+                <div class="flowchart-box">
+                    <div>↓</div>
+                    <input type="text" class="flowchart-input process" placeholder="プロセス">
+                    <hr class="add-line">
+                </div>
+                <div class="flowchart-box">
+                    <div>↓</div>
+                    <input type="text" class="flowchart-input branch" placeholder="ブランチ">
+                    <div class="flowchart-box" style="width: 30%;">
+                        <div>↓</div>
+                        <input type="text" class="flowchart-input condi" placeholder="条件">
+                        <input type="text" class="flowchart-input process" placeholder="プロセス">
+                        <hr class="add-line">
+                    </div>
+                    <div class="flowchart-box" style="width: 30%;">
+                        <div>↓</div>
+                        <input type="text" class="flowchart-input condi" placeholder="条件">
+                        <input type="text" class="flowchart-input process" placeholder="プロセス">
+                        <hr class="add-line">
+                    </div>
+                    <div class="flowchart-box" style="width: 30%;">
+                        <span class="cond-add"></span>
+                    </div>
+                </div>
+                <div class="flowchart-box">
+                    <div>↓</div>
+                    <input type="text" class="flowchart-input process" placeholder="プロセス">
+                    <hr class="add-line">
+                </div>
+                <div class="flowchart-box">
+                    <div>↓</div>
+                    <div id="flowchart-end" class="flowchart-start-end">終了</div>
+                </div>
                 <div id="flowchart-add-area">
                     追加：
                     <button id="nomal-add-btn" class="btn add-btn" onclick="addFlowchart()">プロセス</button>
